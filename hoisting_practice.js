@@ -1,16 +1,18 @@
 // function foo(condition) {
+//   let bar;
+
 //   console.log(bar);
 
-//   qux = 0.5772;
-
+//   let qux = 0.5772;
+  
 //   if (condition) {
-//     var qux = 3.1415;
+//     qux = 3.1415;
 //     console.log(qux);
 //   } else {
-//     var bar = 24;
+//     bar = 24;
 
-//     var xyzzy = function() {
-//       var qux = 2.7183;
+//     let xyzzy = function() {
+//       let qux = 2.7183;
 //       console.log(qux);
 //     };
 
@@ -20,25 +22,33 @@
 
 //   qux = 42;
 //   console.log(qux);
+
 // }
 
 // // foo(true);
 // foo(false);
 
-Pet.prototype.walk = function() {
-  console.log(`${this.name} is walking.`);
-};
 
 function Pet(name, image) {
   this.name = name;
   this.image =  image;
 }
 
-class Image {
+let Image;
+
+var CatImage;
+var pudding;
+
+Pet.prototype.walk = function() {
+  console.log(`${this.name} is walking.`);
+};
+
+
+Image = {
   constructor(file) {
     this.file = file;
   }
 }
 
-var catImage = new Image("cat.png");
-var pudding = new Pet("Pudding", catImage);
+catImage = new Image("cat.png");
+pudding = new Pet("Pudding", catImage);
